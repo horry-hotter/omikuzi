@@ -1,13 +1,22 @@
-console.log('test');
-
+// console.log('test');
+//  運勢の名前
+// Literal型（型でなく値で指定）とUnion型の複合(複数の型指定)
 type Unsei = "大吉" | "中吉" | "吉" | "小吉" | "凶" | "大凶"
 
+// インターフェース(型指定)
 interface Omikuji {
     unsei: Unsei;
     message: string;
 }
 
-class OmikujiBox{
+// button用？の定数？
+const button = document.querySelector('button')!;
+
+// 画面を表示する場所につけるID
+const unseiOutput = document.getElementById("unseiOutput")!;
+
+// クラス
+class OmikujiBox {
     private box: Omikuji[];
     
     // クラス生成時に実行
@@ -28,7 +37,8 @@ class OmikujiBox{
 
     // 運勢の中身を確認
     printUnseiInformation(omikuji: Omikuji){
-        console.log(`運勢は${omikuji.unsei}です！ ${omikuji.message}`);
+        //console.log(`運勢は${omikuji.unsei}です！ ${omikuji.message}`);
+        unseiOutput.textContent = `運勢は${omikuji.unsei}です！ ${omikuji.message}`;
     }
 }
 
@@ -76,10 +86,13 @@ for (const message of ['違う、これは大当たりの布石！']) {
 //customer.printUnseiInformation();
 
 // おみくじ実行
-customer.pickupOmikuzi();
+// customer.pickupOmikuzi();
 
-
-
+// ボタンが押下された時
+button.addEventListener('click', () => {
+   // おみくじ実行
+    customer.pickupOmikuzi(); 
+});
 
 
 
