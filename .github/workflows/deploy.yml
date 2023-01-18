@@ -10,7 +10,6 @@ jobs:
           node-version: '14'
       - run: npm install -g typescript
       - run: tsc -v
-      - run: pwd
       - run: npm run build
       - name: Deploy website
         uses: peaceiris/actions-gh-pages@v3.6.4
