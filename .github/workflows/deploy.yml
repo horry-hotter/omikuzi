@@ -10,3 +10,4 @@ jobs:
           node-version: '14'
       - run: npm install -g typescript
       - run: tsc -v
+      - run: tsc
