@@ -10,5 +10,8 @@ jobs:
           node-version: '14'
       - run: npm install -g typescript
       - run: tsc -v
-      - run: npm build
-      - run: npm export
+      - run: npm run build
+      - name: Deploy website
+        uses: peaceiris/actions-main@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
