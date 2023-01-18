@@ -12,6 +12,6 @@ jobs:
       - run: tsc -v
       - run: npm run build
       - name: Deploy website
-        uses: main
+        uses: omikuzi/actions-main@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
