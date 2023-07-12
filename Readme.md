@@ -10,3 +10,6 @@ tsc -w
 
 # DOM参考
 https://developer.mozilla.org/ja/docs/Web/API/Document/getElementById
+
+## メモ
+gitlab pagesでページ公開してる
